@@ -98,6 +98,7 @@ try{
      searchContactByCitAndState("Aditya","Pune","Maharashtra");
      viewByCity("Pune");
      viewByState("Maharashtra");
+     getCountByCityState("Maharashtra");
 
 }catch(e){
     console.log(e);
@@ -161,4 +162,11 @@ function viewByCity(city){
 
 function viewByState(state){
     addressBookArrays.filter(contact=>contact.state==state).forEach(contact=>console.log(contact))
+}
+
+function getCountByCityState(cityOrState){
+    let count = 0;
+    addressBookArrays.filter(contact=>contact.city==cityOrState).forEach(contact=>++count);
+    addressBookArrays.filter(contact=>contact.state==cityOrState).forEach(contact=>++count);
+    console.log("Count by City or State are: "+count);
 }
