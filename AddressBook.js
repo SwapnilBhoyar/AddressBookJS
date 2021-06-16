@@ -86,13 +86,14 @@ class AddressBook{
 let addressBookArrays = new Array();
 try{
      addressBookArrays.push(new AddressBook("Swapnil", "Bhoyar", "Camp", "Pune","Maharashtra", "7894561230", "swapnil@gmail.com",411001));
-     addressBookArrays.push(new AddressBook("Aditya","Bhosale","Katraj","Pune","Maharashtra","7410852963","aditya@gmail.com",456987));
+     addressBookArrays.push(new AddressBook("Aditya","Bhoyar","Katraj","Pune","Maharashtra","7410852963","aditya@gmail.com",456789));
      console.log(addressBookArrays);
      searchByNameAndEdit("Aditya","Himanshu");
      console.log(addressBookArrays);
      searchByNameAndDelete("Swapnil");
      console.log("AddressBook After Addition and Deletion");
      console.log(addressBookArrays);
+     getCount();
 
 }catch(e){
     console.log(e);
@@ -116,4 +117,11 @@ function searchByNameAndDelete(firstname)
             addressBookArrays.pop(contact)
         }  
     }
+}
+function count(contactCount){
+    return ++contactCount;
+}
+
+function getCount(){
+    console.log("Contacts : "+addressBookArrays.reduce(count,0)+"\n");
 }
