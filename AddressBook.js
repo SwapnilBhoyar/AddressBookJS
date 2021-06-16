@@ -83,9 +83,11 @@ class AddressBook{
             " Email: "+this.email+" pinCode: "+this.zip;
     }
 }
-try {
-    let addressbook = new AddressBook('Swapnil',"Bhoyar","camp","pune","Maharashtra","7894561230","swapnil@gmail.com","411048");
-    console.log(addressbook);
-} catch (error) {
-    console.log(error)
+let addressBookArrays = new Array();
+try{
+     addressBookArrays.push(new AddressBook("Swapnil", "Bhoyar", "Camp", "Pune","Maharashtra", "7894561230", "swapnil@gmail.com",411001));
+     addressBookArrays.push(new AddressBook("Aditya","Bhosale","Katraj","Pune","Maharashtra","7410258963","aditya@gmail.com",658923));
+     console.log(addressBookArrays);
+}catch(e){
+    console.log(e);
 }
