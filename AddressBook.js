@@ -99,6 +99,7 @@ try{
      viewByCity("Pune");
      viewByState("Maharashtra");
      getCountByCityState("Maharashtra");
+     sortAddressBook();
 
 }catch(e){
     console.log(e);
@@ -170,3 +171,9 @@ function getCountByCityState(cityOrState){
     addressBookArrays.filter(contact=>contact.state==cityOrState).forEach(contact=>++count);
     console.log("Count by City or State are: "+count);
 }
+
+function sortAddressBook(){
+    let sortedArray= addressBookArrays.sort();
+    console.log("The sorted AddressBooks are: ");
+    console.log(sortedArray);
+  }
