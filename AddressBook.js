@@ -96,6 +96,8 @@ try{
      getCount();
      checkDuplicateConatct("Swapnil");
      searchContactByCitAndState("Aditya","Pune","Maharashtra");
+     viewByCity("Pune");
+     viewByState("Maharashtra");
 
 }catch(e){
     console.log(e);
@@ -151,5 +153,12 @@ function searchContactByCitAndState(firstname,city,state){
     } else{
         console.log(" Contact not Match! Please give proper city and state");
     }
+}
 
+function viewByCity(city){
+    addressBookArrays.filter(contact=>contact.city==city).forEach(contact=>console.log(contact))
+}
+
+function viewByState(state){
+    addressBookArrays.filter(contact=>contact.state==state).forEach(contact=>console.log(contact))
 }
